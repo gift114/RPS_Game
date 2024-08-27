@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    background-color: beige;
+    font-size: larger;
+}
+
+button{
+    margin:  0 20px;
+    border: none;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(180, 180, 162);
+}
+button:hover{
+    background-color: beige;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    padding-top: 10px;
+    background-color: rgb(180, 180, 162);
+}
+
+p{
+    padding: 10px;
+}
+
+#restart{
+    background: #000;
+    color: white;
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+}
