@@ -9,6 +9,29 @@ const scoreBoard = document.getElementById('score');
 const gameDiv = document.getElementById('choice');
 const restartBtn = document.getElementById('restart');
 const timerDiv = document.getElementById('timer');
+const name = document.getElementById('name');
+const start = document.getElementById('start');
+const play = document.getElementById('how');
+const rule = document.getElementById('rule');
+const close = document.getAnimations('close');
+const intro = document.getElementById('intro');
+const container = document.getElementById('container')
+
+function startGame() {
+    container.style.display = "block";
+    intro.style.display = "none";
+    startTimer(); 
+}
+
+function howToPlay() {
+    rule.style.display = "block";
+    intro.style.display = "none";
+}
+
+function closeHowToPlayPage() {
+    rule.style.display = "none";
+    intro.style.display = "block";
+}
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
@@ -66,7 +89,10 @@ function disableRPSBtns() {
 }
 
 function updateScore() {
-    scoreBoard.innerText = `${userScore} : ${computerScore}`;
+    let userId = document.getElementById('userId');
+    let userID = userId.value || "User";
+    let compId = "Comp";    
+    scoreBoard.innerText = `${userID} : ${userScore}   -   ${compId} : ${computerScore}`;
 }
 
 function restartGame() {
@@ -118,7 +144,8 @@ function main() {
     paper.addEventListener('click', () => user("paper"));
     scissors.addEventListener('click', () => user("scissors"));
     restartBtn.addEventListener('click', restartGame);
-    startTimer();
+    close.addEventListener('click', closeHowToPLayPage);
+    // startTimer();
 }
 
 main();

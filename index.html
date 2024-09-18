@@ -9,18 +9,50 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>ROCK PAPER SCISSORS</h1>
-        <div id="timer"></div>
-        <p id="score"></p>
-        <p id="message"></p>
-        <div id="game">
-            <button id="rock" class="choice">ROCK</button>
-            <button id="paper" class="choice">PAPER</button>
-            <button id="scissors" class="choice" >SCISSORS</button>
+    <div id="intro">
+        <h1>Welcome To Rock, Paper, Scissors Hand Game</h1>
+        <form action="">
+            <label id="name" for="name">Enter your name: </label>
+            <input id="userId" type="text">
+            <div>
+                <button type="button" id="strat" onclick="startGame()">START</button>
+                <button type="button" id="how" onclick="howToPlay()">HOW TO PLAY</button>
+            </div>
+        </form>
+    </div>
+
+    <section id="rule">
+        <div id="rules">
+            <h1>Rules to Play, How?</h1>
+            <p>
+                Our Childhood hand game rock-paper-scissors is a game played by us to enjoy our time. 
+                It is a fun and easy hand game that anyone can learn and enjoy. It's a great way to improve 
+                critical thinking and communication skills to help make minor decisions when kids and their 
+                friends can't agree, or even just an entertaining way to pass the time. This game is played
+                in a series of rounds and the person who wins most rounds wins the game.
+            </p>
+            <p>
+                All you need to know is:<br />-Rock(&#128074) beats scissors(&#9996)<br />-Scissors(&#9996)
+                beats paper(&#9995)<br />-Paper(&#9995) beats rock(&#128074)</b>
+            </p> <br>
+            <button type="button" id="close" onclick="closeHowToPlayPage()">CLOSE</button>
         </div>
-        <button id="restart" style="display: none;">Restart</button>
-        <p>Make your move.</p>
+    </section>
+
+    <div id="container">
+        <div id="game">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div id="timer"></div>
+            <p id="score"></p>
+            <p id="message"></p>
+            <div id="emoji">
+                <button id="rock" class="choice"> <span>&#128074</span></button>
+                <button id="paper" class="choice"> <span>&#9995</span></button>
+                <button id="scissors" class="choice"><span>&#9996 </span></button>
+            </div>
+            <button type="button" id="restart" style="display: none;">Restart</button>
+            <p>Make your move.</p>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
