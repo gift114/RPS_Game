@@ -91,7 +91,7 @@ function disableRPSBtns() {
 function updateScore() {
     let userId = document.getElementById('userId');
     let userID = userId.value || "User";
-    let compId = "Comp";    
+    let compId = "comp";    
     scoreBoard.innerText = `${userID} : ${userScore}   -   ${compId} : ${computerScore}`;
 }
 
