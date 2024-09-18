@@ -52,7 +52,7 @@ input[type="text"] {
     font-size: 1rem;
     border: 2px solid #ccc;
     border-radius: 5px;
-    width: 250px;
+    width: 200px;
 }
 
 #intro {
@@ -117,5 +117,14 @@ input[type="text"] {
         width: 90%;
         font-size: 14px;
         padding: 10px;
+    }
+
+    #game #emoji button {
+        margin: 15px;
+    } 
+    
+    #game span {
+        font-size: 30px;
+        text-align: center;
     }
 }
